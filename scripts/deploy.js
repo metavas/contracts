@@ -3,10 +3,9 @@ const IPFS_URL = process.env.IPFS_URL;
 
 async function main() {
 
-    const NFT = await hre.ethers.getContractFactory("Ape_Of_Lagos");
-    const nft = await NFT.deploy("Ape of Lagos", "AOL", IPFS_URL);
-    await nft.deployed();
-    console.log("Ape of Lagos nft deployed to:", nft.address);
+    const NFTMarketPlace = await hre.ethers.getContractFactory("NFTMarketPlace");
+    await NFTMarketPlace.deployed();
+    console.log("MetaVas NFT Marketplace successfully deployed:", nft.address);
 
 }
 

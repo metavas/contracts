@@ -5,7 +5,7 @@ import "github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/uti
 import "github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/token/ERC721/ERC721.sol";
 import "github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/security/ReentrancyGuard.sol";
 
-contract MarketPlace is ReentrancyGuard {
+contract NFTMarketPlace is ReentrancyGuard {
     using Counters for Counters.Counter;
     Counters.Counter private _itemIds;
     Counters.Counter private _itemsSold;
@@ -117,5 +117,3 @@ contract MarketPlace is ReentrancyGuard {
     }
 
 }
-
-/// Thanks for inspiration: https://github.com/dabit3/polygon-ethereum-nextjs-marketplace/
