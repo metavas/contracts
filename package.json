@@ -5,7 +5,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "compile": "npx hardhat compile",
     "deploy": "npx hardhat run scripts/deploy.js --network $npm_package_config_network",
-    "verify": "npx hardhat verify --network $npm_package_config_network --constructor-args arguments.js 0x567519017fFa37Ac6179Dbf90Daa741dA3BB34C3"
+    "verify": "npx hardhat verify --network $npm_package_config_network --constructor-args arguments.js 0x567519017fFa37Ac6179Dbf90Daa741dA3BB34C3 "
   },
   "devDependencies": {
     "@nomiclabs/hardhat-ethers": "^2.0.3",
