@@ -5,10 +5,14 @@ require('dotenv').config()
 const privateKey = process.env.privateKey;
 const infuraKey = process.env.infuraKey;
 const polygonScanApiKey = process.env.polygonscan_api_key;
+const etherscan_api_key = process.env.etherscan_api_key;
 
 module.exports = {
   defaultNetwork: "hardhat",
   networks: {
+    localhost: {
+      url: "http://127.0.0.1:8545"
+    },
     hardhat: {
       chainId: 1337
     },
@@ -26,7 +30,12 @@ module.exports = {
     },
   },
   etherscan: {
-    apiKey: polygonScanApiKey
+    apiKey: {
+      rinkeby: etherscan_api_key,
+      mainnet: etherscan_api_key,
+      polygonMumbai: polygonScanApiKey,
+      polygon: polygonScanApiKey
+    }
   },
   solidity: {
     version: "0.8.9",

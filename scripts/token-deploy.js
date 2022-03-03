@@ -3,8 +3,9 @@ const hre = require("hardhat");
 async function main() {
 
     const MetaVasToken = await hre.ethers.getContractFactory("MetaVasToken");
-    await MetaVasToken.deployed();
-    console.log("MetaVas Token successfully deployed:", MetaVasToken.address);
+    const metavas = await MetaVasToken.deploy();
+    await metavas.deployed();
+    console.log("MetaVas Token successfully deployed:", metavas.address);
 
 }
 

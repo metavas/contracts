@@ -1,4 +1,5 @@
-pragma solidity 0.5.16;
+// SPDX-License-Identifier: MIT
+pragma solidity 0.8.9;
 
 interface IBEP20 {
     /**
@@ -104,10 +105,10 @@ interface IBEP20 {
 contract Context {
     // Empty internal constructor, to prevent people from mistakenly deploying
     // an instance of this contract, which should be used via inheritance.
-    constructor () internal { }
+    constructor () { }
 
     function _msgSender() internal view returns (address payable) {
-        return msg.sender;
+        return payable(msg.sender);
     }
 
     function _msgData() internal view returns (bytes memory) {
@@ -285,7 +286,7 @@ contract Ownable is Context {
     /**
      * @dev Initializes the contract setting the deployer as the initial owner.
    */
-    constructor () internal {
+    constructor () {
         address msgSender = _msgSender();
         _owner = msgSender;
         emit OwnershipTransferred(address(0), msgSender);
@@ -348,7 +349,7 @@ contract MetaVasToken is Context, IBEP20, Ownable {
     string private _symbol;
     string private _name;
 
-    constructor() public {
+    constructor() {
         _name = "MetaVas";
         _symbol = "VAS";
         _decimals = 18;
