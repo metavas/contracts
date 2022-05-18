@@ -30,7 +30,7 @@ module.exports = {
     },
   },
   etherscan: {
-    apiKey: polygonScanApiKey
+    apiKey: etherscan_api_key
   },
   solidity: {
     version: "0.8.9",
