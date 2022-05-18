@@ -11,7 +11,7 @@
     "token-deploy": "npx hardhat run scripts/token-deploy.js --network $npm_package_config_network",
     "dao-verify": "npx hardhat verify --network $npm_package_config_network --constructor-args arguments.js 0x567519017fFa37Ac6179Dbf90Daa741dA3BB34C3",
     "marketplace-verify": "npx hardhat verify --network $npm_package_config_network --constructor-args arguments.js 0x567519017fFa37Ac6179Dbf90Daa741dA3BB34C3",
-    "token-verify": "npx hardhat verify --network rinkeby 0x5FbDB2315678afecb367f032d93F642f64180aa3"
+    "token-verify": "npx hardhat verify --network mumbai 0xF51390A7A55A45309a1c722e7A195084759c9bB8"
   },
   "devDependencies": {
     "@nomiclabs/hardhat-ethers": "^2.0.3",
